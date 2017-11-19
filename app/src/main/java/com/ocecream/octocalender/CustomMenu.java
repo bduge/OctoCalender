@@ -14,44 +14,45 @@ public class CustomMenu extends AppCompatActivity {
     EditText mEditLat;
     EditText mEditLong;
 
+    public double getCustomLat(EditText hello){
+        String customLatString = hello.getText().toString();
+        double customLat = Double.parseDouble(customLatString);
+        return customLat;
+    }
+
+    public double getCustomLong(EditText hallo){
+        String customLongString = hallo.getText().toString();
+        double customLong = Double.parseDouble(customLongString);
+        return customLong;
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_menu);
 
-        mButton = (Button) findViewById(R.id.CustomConfirm);
-        mEditLat = (EditText) findViewById(R.id.CustomLat);
-        mEditLong = (EditText) findViewById(R.id.CustomLong);
+        Button mButton = (Button) findViewById(R.id.CustomConfirm);
+        final EditText mEditLat = (EditText) findViewById(R.id.CustomLat);
+        final EditText mEditLong = (EditText) findViewById(R.id.CustomLong);
 
         mButton.setOnClickListener(new View.OnClickListener() {
            // @Override
 
 
-            public double getCustomLat(){
-                String customLatString = mEditLat.getText().toString();
-                double customLat = Double.parseDouble(customLatString);
-                return customLat;
-            }
 
-            public double getCustomLong(){
-                String customLongString = mEditLong.getText().toString();
-                double customLong = Double.parseDouble(customLongString);
-                return customLong;
-            }
 
             //Intent sendingIntent = new Intent(getCom, MapCustom.class);
 
             public void onClick(View view) {
 
                 //startActivity(new Intent(CustomMenu.this, MapCustom.class));
-                double customLat = getCustomLat();
-                double customLong = getCustomLong();
+                double customLat = getCustomLat(mEditLat);
+                double customLong = getCustomLong(mEditLong);
                 Intent sendingIntent = new Intent(getBaseContext(), MapCustom.class);
-                sendingIntent.putExtra("customLat_1", customLat);
-                sendingIntent.putExtra("customLong_1", customLong);
+                sendingIntent.putExtra("customLat", customLat);
+                sendingIntent.putExtra("customLong", customLong);
                 startActivity(sendingIntent);
-                startActivity(new Intent(CustomMenu.this, MapCustom.class));
-
             }
 
         });

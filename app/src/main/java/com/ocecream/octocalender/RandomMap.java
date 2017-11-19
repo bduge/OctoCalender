@@ -38,12 +38,12 @@ public class RandomMap extends FragmentActivity implements OnMapReadyCallback {
 
     public double getRandomLong() {
 
-        double longitude = Math.random() * 360 - 180;
+        double longitude = Math.random() * 358 - 179;
         return longitude;
     }
 
     public double getRandomLat(){
-        double latitude = Math.random() *180 - 90;
+        double latitude = Math.random() * 168 - 84;
         return latitude;
     }
 

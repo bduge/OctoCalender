@@ -9,11 +9,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import java.util.Scanner;
 
 public class MapCustom extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    public double customLat;
+    public double customLong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,9 @@ public class MapCustom extends FragmentActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        customLat = getIntent().getDoubleExtra("customLat", 0.00);
+        customLong = getIntent().getDoubleExtra("customLong", 0.00);
     }
 
     /**
@@ -38,16 +42,12 @@ public class MapCustom extends FragmentActivity implements OnMapReadyCallback {
 
 
 
-    double customLat = getIntent().getDoubleExtra("customLat", 0.00);
-    double customLong = getIntent().getDoubleExtra("customLong", 0.00);
-
-
 
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(customLat, customLong);
+        LatLng sydney = new LatLng(customLat - 84, customLong -179);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Your Location"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
