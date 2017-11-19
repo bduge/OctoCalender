@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+
 public class MainMenu extends AppCompatActivity {
 
     @Override
@@ -31,6 +32,15 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainMenu.this, RandomMap.class));
+            }
+        });
+
+
+        Button ourThirdButton = (Button) findViewById(R.id.buttonCustom);
+        ourThirdButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainMenu.this, CustomMenu.class));
             }
         });
     }
