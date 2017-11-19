@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ocecream.octocalender.CustomMenu">
+
+    <Button
+        android:id="@+id/CustomConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="24dp"
+        android:text="Find Location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CustomLong" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="24dp"
+        android:text="Enter Custom Coordinates"
+        app:layout_constraintBottom_toTopOf="@+id/CustomLat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/CustomLat"
+        android:layout_width="244dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="63dp"
+        android:ems="10"
+        android:hint="Latitude between -90 and 90"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/CustomLong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.092"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/CustomLong"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="68dp"
+        android:ems="10"
+        android:hint="Longitude between -180 and 180"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/CustomConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CustomLat" />
+
+</android.support.constraint.ConstraintLayout>
