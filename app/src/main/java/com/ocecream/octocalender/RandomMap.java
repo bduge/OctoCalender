@@ -34,13 +34,26 @@ public class RandomMap extends FragmentActivity implements OnMapReadyCallback {
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
-    @Override
+   // @Override
+
+    public double getRandomLong() {
+
+        double longitude = Math.random() * 360 - 180;
+        return longitude;
+    }
+
+    public double getRandomLat(){
+        double latitude = Math.random() *180 - 90;
+        return latitude;
+    }
+
+
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng randomLocation = new LatLng(getRandomLat(), getRandomLong());
+        mMap.addMarker(new MarkerOptions().position(randomLocation).title("random place!"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(randomLocation));
     }
 }

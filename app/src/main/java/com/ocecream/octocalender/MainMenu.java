@@ -18,11 +18,19 @@ public class MainMenu extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button ourButton = (Button) findViewById(R.id.buttonMain);
-        ourButton.setOnClickListener(new View.OnClickListener() {
+        Button ourFirstButton = (Button) findViewById(R.id.buttonMain);
+        ourFirstButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainMenu.this, MapsActivity.class));
+            }
+        });
+
+        Button ourSecondButton = (Button) findViewById(R.id.buttonExplore);
+        ourSecondButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainMenu.this, RandomMap.class));
             }
         });
     }
