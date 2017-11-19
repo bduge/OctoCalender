@@ -55,11 +55,15 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="265dp"
-        android:layout_height="47dp"
+        android:layout_width="271dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="66dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="16dp"
         android:text="Welcome to OctoMap!"
         android:textSize="26dp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
