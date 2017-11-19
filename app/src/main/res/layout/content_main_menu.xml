@@ -11,15 +11,35 @@
     <Button
         android:id="@+id/buttonMain"
         android:layout_width="0dp"
-        android:layout_height="83dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="232dp"
         android:layout_marginEnd="83dp"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="231dp"
+        android:layout_marginTop="400dp"
         android:text="Display Current Location"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Welcome to OctoMap"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="299dp"
+        android:layout_height="432dp"
+        app:srcCompat="@drawable/benevocats"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 </android.support.constraint.ConstraintLayout>
