@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OctoCalender.iml" filepath="$PROJECT_DIR$/OctoCalender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OctoMap.iml" filepath="$PROJECT_DIR$/OctoMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/OctoMap-app.iml" filepath="$PROJECT_DIR$/app/OctoMap-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
